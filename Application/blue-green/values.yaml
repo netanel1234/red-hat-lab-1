@@ -9,5 +9,5 @@ deployment:
     weight: 5
   - name: red
     replicas: 1
-    color: green
+    color: red
     weight: 5
