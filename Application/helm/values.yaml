@@ -2,7 +2,8 @@ ReplicaNumber: 3
 
 containers:
   containerPort: 8080
-  image: 'quay.io/netanel-elikamel/red-hat-lab-1:v2'
+  image: 'quay.io/netanel-elikamel/red-hat-lab-1'
+  base: 'v2'
 
 service:
   servicePort: 8080
