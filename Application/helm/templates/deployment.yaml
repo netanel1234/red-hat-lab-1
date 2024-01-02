@@ -19,15 +19,15 @@ spec:
             defaultMode: 420
       containers:
         - resources: {}
+        volumeMounts:
+        - name: index-html
+          mountPath: /tmp/html
           terminationMessagePath: /dev/termination-log
           name: {{ .Chart.Name }}
           ports:
             - containerPort: {{ .Values.containers.containerPort }}
               protocol: TCP
-          imagePullPolicy: IfNotPresent
-          volumeMounts:
-          - name: index-html
-            mountPath: /tmp/html
+          imagePullPolicy: IfNotPresent          
           image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
