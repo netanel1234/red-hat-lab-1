@@ -3,7 +3,7 @@ deploy1:
 
   containers:
       containerPort: 8080
-      image: 'quay.io/argo-helm-workshop/workshop-app'
+      image: 'quay.io/argo-helm-workshop/red-hat-lab-1'
       tag: 'chart_v2'
 
   service:
@@ -13,7 +13,7 @@ deploy2:
 
   containers:
     containerPort: 8080
-    image: 'quay.io/argo-helm-workshop/workshop-app'
+    image: 'quay.io/argo-helm-workshop/red-hat-lab-1'
     tag: 'chart_v2'
 
   service:
