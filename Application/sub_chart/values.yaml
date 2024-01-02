@@ -14,7 +14,7 @@ deploy2:
   containers:
     containerPort: 8080
     image: 'quay.io/argo-helm-workshop/red-hat-lab-1'
-    tag: 'chart_v2'
+    tag: 'chart_v1'
 
   service:
     servicePort: 8080
