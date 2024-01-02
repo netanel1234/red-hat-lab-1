@@ -29,6 +29,29 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent          
           image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
+          readinessProbe:
+            httpGet:
+              path: /health/readiness
+              port: {{ .Values.containers.containerPort  }}
+              scheme: HTTP
+            initialDelaySeconds: 1
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /health/liveliness
+              port: {{ .Values.containers.containerPort }}
+              scheme: HTTP
+            initialDelaySeconds: 1
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          env:
+            - name: PORT
+              value: {{ .Values.containers.containerPort | quote }}    
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
