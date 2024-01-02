@@ -20,7 +20,7 @@ spec:
       containers:
         - resources: {}
           volumeMounts:
-          - name: index-html
+          - name: index.html
             mountPath: /tmp/html
           terminationMessagePath: /dev/termination-log
           name: {{ .Chart.Name }}
