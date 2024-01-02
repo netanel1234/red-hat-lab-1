@@ -9,7 +9,7 @@ dependencies:
     alias: deploy1
   - name: red-hat-lab-1
     repository: "oci://ghcr.io/netanel1234/helm"
-    version: "1.0.1"
+    version: "1.0.0"
     alias: deploy2
 version: 1.0.0
 appVersion: "1.0.0"
