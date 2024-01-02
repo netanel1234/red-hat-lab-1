@@ -4,4 +4,4 @@ metadata:
   name: '{{ .Chart.Name }}-html'
 immutable: false
 data:
-  index.html
+  "aaa"
